@@ -1,5 +1,7 @@
 # Recharts measures axis tick labels in the page's font, not the tick's
 
+Reported upstream: https://github.com/recharts/recharts/issues/8187
+
 When an axis's ticks use a different font family than the page (for example `tick={{ fontFamily: "Roboto Mono" }}` on a page set in Roboto), Recharts measures every tick label in the page's font. The labels come out narrower than they render, so the clamp that keeps the first and last labels inside the axis falls short, and both edge labels run past the SVG and get clipped. The overflow is exactly half the difference between the measured and rendered widths.
 
 ## Reproduction
