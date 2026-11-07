@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Recharts tick font family measurement</title>
+    <style>
+      body {
+        margin: 24px;
+        font-family: "Roboto", sans-serif;
+      }
+
+      /* Control: the page font matches the tick font. */
+      html[data-variant="body-matches-tick"] body {
+        font-family: "Roboto Mono", monospace;
+      }
+
+      /* Control: only the measurement span gets the tick font. */
+      html[data-variant="span-matches-tick"] #recharts_measurement_span {
+        font-family: "Roboto Mono", monospace;
+      }
+
+      /* Shows the SVG's edge in screenshots. */
+      .recharts-surface {
+        outline: 1px dashed #d33;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
